@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
@@ -18,12 +19,14 @@ import retrofit.Retrofit;
 public class MainActivity extends AppCompatActivity {
 
     private SimpleDraweeView imageView;
+    private TextView answerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = (SimpleDraweeView) findViewById(R.id.mainView);
+        answerView= (TextView) findViewById(R.id.answerTextView);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://yesno.wtf")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         .setUri(Uri.parse(response.body().image))
                         .build();
                 imageView.setController(controller);
+                answerView.setText(response.body().answer);
             }
 
             @Override
