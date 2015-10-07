@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainView"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    fresco:actualImageScaleType="focusCrop"
-    fresco:fadeDuration="300"
-    fresco:placeholderImage="@android:color/black"
-    fresco:placeholderImageScaleType="fitCenter"/>
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@android:color/black"
+        fresco:placeholderImageScaleType="fitCenter" />
+</LinearLayout>
