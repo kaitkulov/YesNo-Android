@@ -35,5 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("sldkfnapsjdfpsdfvi", "OLOLOLOLOLO");
             }
         });
+
+       // mMainView = (SimpleDraweeView) findViewById(R.id.mainView);
     }
 }
