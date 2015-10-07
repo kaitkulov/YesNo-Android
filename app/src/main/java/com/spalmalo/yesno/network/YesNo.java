@@ -1,4 +1,4 @@
-package com.spalmalo.yesno;
+package com.spalmalo.yesno.network;
 
 import java.io.Serializable;
 
