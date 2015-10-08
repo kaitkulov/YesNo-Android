@@ -6,13 +6,13 @@
 
     <com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:fresco="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/mainView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         fresco:actualImageScaleType="fitCenter"
         fresco:fadeDuration="300"
-        fresco:progressBarImage="@android:color/holo_blue_bright"
+        fresco:progressBarImage="@drawable/yes_no_signs"
+        fresco:progressBarImageScaleType="centerCrop"
         fresco:placeholderImage="@android:color/black"
         fresco:placeholderImageScaleType="fitCenter" />
 
@@ -27,5 +27,6 @@
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"/>
 </RelativeLayout>
